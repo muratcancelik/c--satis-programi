@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D264BFCF-59E0-482F-AD47-1CB97C8B113E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CosmoMillaCosmetics</RootNamespace>
+    <AssemblyName>CosmoMillaCosmetics</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fHizliButonUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHizliButonUrunEkle.Designer.cs">
+      <DependentUpon>fHizliButonUrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNakitKart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNakitKart.Designer.cs">
+      <DependentUpon>fNakitKart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSatis.Designer.cs">
+      <DependentUpon>fSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fStok.Designer.cs">
+      <DependentUpon>fStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUrunGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUrunGiris.Designer.cs">
+      <DependentUpon>fUrunGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUrunGrubuEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUrunGrubuEkle.Designer.cs">
+      <DependentUpon>fUrunGrubuEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Islemler.cs" />
+    <Compile Include="Nesnelerim.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fHizliButonUrunEkle.resx">
+      <DependentUpon>fHizliButonUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNakitKart.resx">
+      <DependentUpon>fNakitKart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSatis.resx">
+      <DependentUpon>fSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fStok.resx">
+      <DependentUpon>fStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUrunGiris.resx">
+      <DependentUpon>fUrunGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUrunGrubuEkle.resx">
+      <DependentUpon>fUrunGrubuEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turkish-lira.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kartnakit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kredikarti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tl_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ekle20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode4832.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear4848.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ara2424.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
