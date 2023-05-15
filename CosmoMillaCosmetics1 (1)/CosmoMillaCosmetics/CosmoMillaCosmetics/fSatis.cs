@@ -385,7 +385,7 @@ namespace CosmoMillaCosmetics
                     {
                         Islemler.StokArttir(gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString(), Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Toplam"].Value.ToString()));
                     }
-                    alisfiyattoplam += Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyati"].Value.ToString());
+                    alisfiyattoplam += Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyati"].Value.ToString()) * Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Toplam"].Value.ToString());
 
 
 
@@ -543,6 +543,19 @@ namespace CosmoMillaCosmetics
                     }
                 }
             }
+        }
+
+        private void chSatisiadeislemi_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chSatisiadeislemi.Checked)
+            {
+                chSatisiadeislemi.Text = "Iade Yapiliyor";
+            }
+            else
+            {
+                chSatisiadeislemi.Text = "Satis Yapiliyor";
+            }
+
         }
     }
 }
