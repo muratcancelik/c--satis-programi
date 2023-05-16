@@ -25,7 +25,7 @@ namespace CosmoMillaCosmetics
             bitis = bitis.AddDays(1);
             using(var db = new BarkodDbEntites())
             {
-                if(listFiltreleme.SelectedIndex==0)
+                if (listFiltreleme.SelectedIndex == 0)
                 {
                     db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis).OrderByDescending(x => x.Tarih).Load();
                     var islemozet = db.IslemOzet.Local.ToBindingList();
@@ -53,9 +53,33 @@ namespace CosmoMillaCosmetics
                     tKdvToplam.Text = (kdvtutarisatis - kdvtutariiade).ToString("C2");
 
                 }
+                else if (listFiltreleme.SelectedIndex == 1)
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.Iade == false && x.Gelir == false && x.Gider == false).Load();
+                    var islemozet = db.IslemOzet.Local.ToBindingList();
+                    gridListe.DataSource = islemozet;
+
+                }
+                else if (listFiltreleme.SelectedIndex == 2)
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.Iade == false && x.Iade == true).Load();
+                    var islemozet = db.IslemOzet.Local.ToBindingList();
+
+                }
+                else if (listFiltreleme.SelectedIndex == 3)
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.Iade == true ).Load();
+                    var islemozet = db.IslemOzet.Local.ToBindingList();
+                    
+                }
+                else if(listFiltreleme.SelectedIndex==4)
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.Gider == true).Load();
+                    var islemozet = db.IslemOzet.Local.ToBindingList();
+                }
             }
 
-
+            Islemler.GridDuzenle(gridListe);
 
 
 
@@ -64,13 +88,37 @@ namespace CosmoMillaCosmetics
 
         private void bGelirEkle_Click(object sender, EventArgs e)
         {
-
+            fGelirGider fGelirGider = new fGelirGider();
+            fGelirGider.gelirgider = "Gelir";
+            fGelirGider.kullanici = lKullanici.Text;
+            fGelirGider.ShowDialog();
         }
 
         private void fRapor_Load(object sender, EventArgs e)
         {
             listFiltreleme.SelectedIndex = 0;
             tKartKomisyon.Text = Islemler.KartKomisyon().ToString();
+        }
+
+        private void gridListe_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if(e.ColumnIndex==2||e.ColumnIndex==6||e.ColumnIndex==7)
+            {
+                if(e.Value is bool)
+                {
+                    bool value = (bool)e.Value;
+                    e.Value = (value) ? "Evet" : "Hayir";
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        private void bGiderEkle_Click(object sender, EventArgs e)
+        {
+            GelirGider fGelirGider = new fGelirGider();
+            fGelirGider.gelirgider = "Gider";
+            fGelirGider.kullanici = lKullanici.Text;
+            fGelirGider.ShowDialog();
         }
     }
 }

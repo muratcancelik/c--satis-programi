@@ -29,14 +29,12 @@ namespace CosmoMillaCosmetics
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dtBitis = new System.Windows.Forms.DateTimePicker();
-            this.bGiderEkle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.bGelirEkle = new System.Windows.Forms.Button();
             this.dtBaslangic = new System.Windows.Forms.DateTimePicker();
             this.tKartKomisyon = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,10 +61,13 @@ namespace CosmoMillaCosmetics
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bGoster = new System.Windows.Forms.Button();
             this.listFiltreleme = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.gridListe = new System.Windows.Forms.DataGridView();
+            this.bGiderEkle = new System.Windows.Forms.Button();
+            this.bGelirEkle = new System.Windows.Forms.Button();
+            this.bGoster = new System.Windows.Forms.Button();
+            this.lKullanici = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -84,6 +85,7 @@ namespace CosmoMillaCosmetics
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lKullanici);
             this.splitContainer1.Panel1.Controls.Add(this.dtBitis);
             this.splitContainer1.Panel1.Controls.Add(this.bGiderEkle);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
@@ -134,18 +136,6 @@ namespace CosmoMillaCosmetics
             this.dtBitis.Size = new System.Drawing.Size(232, 26);
             this.dtBitis.TabIndex = 14;
             // 
-            // bGiderEkle
-            // 
-            this.bGiderEkle.BackColor = System.Drawing.Color.DarkCyan;
-            this.bGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.bGiderEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bGiderEkle.Image = global::CosmoMillaCosmetics.Properties.Resources.Ekle20;
-            this.bGiderEkle.Location = new System.Drawing.Point(1107, 170);
-            this.bGiderEkle.Name = "bGiderEkle";
-            this.bGiderEkle.Size = new System.Drawing.Size(75, 46);
-            this.bGiderEkle.TabIndex = 51;
-            this.bGiderEkle.UseVisualStyleBackColor = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -156,19 +146,6 @@ namespace CosmoMillaCosmetics
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Bitis Tarihi";
-            // 
-            // bGelirEkle
-            // 
-            this.bGelirEkle.BackColor = System.Drawing.Color.YellowGreen;
-            this.bGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.bGelirEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bGelirEkle.Image = global::CosmoMillaCosmetics.Properties.Resources.Ekle20;
-            this.bGelirEkle.Location = new System.Drawing.Point(1107, 66);
-            this.bGelirEkle.Name = "bGelirEkle";
-            this.bGelirEkle.Size = new System.Drawing.Size(75, 46);
-            this.bGelirEkle.TabIndex = 50;
-            this.bGelirEkle.UseVisualStyleBackColor = false;
-            this.bGelirEkle.Click += new System.EventHandler(this.bGelirEkle_Click);
             // 
             // dtBaslangic
             // 
@@ -453,25 +430,6 @@ namespace CosmoMillaCosmetics
             this.label1.TabIndex = 15;
             this.label1.Text = "Nakit";
             // 
-            // bGoster
-            // 
-            this.bGoster.BackColor = System.Drawing.Color.OrangeRed;
-            this.bGoster.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.bGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bGoster.ForeColor = System.Drawing.Color.White;
-            this.bGoster.Image = global::CosmoMillaCosmetics.Properties.Resources.Ara32;
-            this.bGoster.Location = new System.Drawing.Point(397, 66);
-            this.bGoster.Margin = new System.Windows.Forms.Padding(1);
-            this.bGoster.Name = "bGoster";
-            this.bGoster.Size = new System.Drawing.Size(131, 95);
-            this.bGoster.TabIndex = 26;
-            this.bGoster.Text = "Goster";
-            this.bGoster.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bGoster.UseVisualStyleBackColor = false;
-            this.bGoster.Click += new System.EventHandler(this.bAra_Click);
-            // 
             // listFiltreleme
             // 
             this.listFiltreleme.FormattingEnabled = true;
@@ -505,24 +463,24 @@ namespace CosmoMillaCosmetics
             this.gridListe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridListe.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gridListe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridListe.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridListe.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridListe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridListe.EnableHeadersVisualStyles = false;
             this.gridListe.Location = new System.Drawing.Point(0, 0);
@@ -530,18 +488,75 @@ namespace CosmoMillaCosmetics
             this.gridListe.Name = "gridListe";
             this.gridListe.ReadOnly = true;
             this.gridListe.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.gridListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridListe.Size = new System.Drawing.Size(1221, 243);
             this.gridListe.TabIndex = 4;
+            this.gridListe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridListe_CellFormatting);
+            // 
+            // bGiderEkle
+            // 
+            this.bGiderEkle.BackColor = System.Drawing.Color.DarkCyan;
+            this.bGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.bGiderEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGiderEkle.Image = global::CosmoMillaCosmetics.Properties.Resources.Ekle20;
+            this.bGiderEkle.Location = new System.Drawing.Point(1107, 170);
+            this.bGiderEkle.Name = "bGiderEkle";
+            this.bGiderEkle.Size = new System.Drawing.Size(75, 46);
+            this.bGiderEkle.TabIndex = 51;
+            this.bGiderEkle.UseVisualStyleBackColor = false;
+            this.bGiderEkle.Click += new System.EventHandler(this.bGiderEkle_Click);
+            // 
+            // bGelirEkle
+            // 
+            this.bGelirEkle.BackColor = System.Drawing.Color.YellowGreen;
+            this.bGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.bGelirEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGelirEkle.Image = global::CosmoMillaCosmetics.Properties.Resources.Ekle20;
+            this.bGelirEkle.Location = new System.Drawing.Point(1107, 66);
+            this.bGelirEkle.Name = "bGelirEkle";
+            this.bGelirEkle.Size = new System.Drawing.Size(75, 46);
+            this.bGelirEkle.TabIndex = 50;
+            this.bGelirEkle.UseVisualStyleBackColor = false;
+            this.bGelirEkle.Click += new System.EventHandler(this.bGelirEkle_Click);
+            // 
+            // bGoster
+            // 
+            this.bGoster.BackColor = System.Drawing.Color.OrangeRed;
+            this.bGoster.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.bGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bGoster.ForeColor = System.Drawing.Color.White;
+            this.bGoster.Image = global::CosmoMillaCosmetics.Properties.Resources.Ara32;
+            this.bGoster.Location = new System.Drawing.Point(397, 66);
+            this.bGoster.Margin = new System.Windows.Forms.Padding(1);
+            this.bGoster.Name = "bGoster";
+            this.bGoster.Size = new System.Drawing.Size(131, 95);
+            this.bGoster.TabIndex = 26;
+            this.bGoster.Text = "Goster";
+            this.bGoster.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bGoster.UseVisualStyleBackColor = false;
+            this.bGoster.Click += new System.EventHandler(this.bAra_Click);
+            // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullanici.Location = new System.Drawing.Point(12, 246);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(114, 20);
+            this.lKullanici.TabIndex = 52;
+            this.lKullanici.Text = "Filtreleme Turu";
             // 
             // fRapor
             // 
@@ -600,5 +615,6 @@ namespace CosmoMillaCosmetics
         private System.Windows.Forms.TextBox tSatisKart;
         private System.Windows.Forms.TextBox tSatisNakit;
         private System.Windows.Forms.DataGridView gridListe;
+        private System.Windows.Forms.Label lKullanici;
     }
 }
