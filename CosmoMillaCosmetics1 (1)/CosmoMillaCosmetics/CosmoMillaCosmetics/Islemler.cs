@@ -106,6 +106,10 @@ namespace CosmoMillaCosmetics
                             dgv.Columns[i].HeaderText = "Kdv Tutarı";
                             dgv.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                             dgv.Columns[i].DefaultCellStyle.Format = "C2"; break;
+                        case "Toplam":
+                            dgv.Columns[i].HeaderText = "Toplam";
+                            dgv.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                            dgv.Columns[i].DefaultCellStyle.Format = "C2"; break;
 
                     }
                 }

@@ -50,9 +50,11 @@ namespace CosmoMillaCosmetics
             this.rdTumu = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.lKullanici = new System.Windows.Forms.Label();
             this.tUrunAra = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.gridListe = new System.Windows.Forms.DataGridView();
+            this.bRaporAl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -279,6 +281,8 @@ namespace CosmoMillaCosmetics
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.splitContainer2.Panel1.Controls.Add(this.bRaporAl);
+            this.splitContainer2.Panel1.Controls.Add(this.lKullanici);
             this.splitContainer2.Panel1.Controls.Add(this.tUrunAra);
             this.splitContainer2.Panel1.Controls.Add(this.label6);
             // 
@@ -288,6 +292,18 @@ namespace CosmoMillaCosmetics
             this.splitContainer2.Size = new System.Drawing.Size(540, 513);
             this.splitContainer2.SplitterDistance = 61;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // lKullanici
+            // 
+            this.lKullanici.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullanici.Location = new System.Drawing.Point(340, 22);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(69, 20);
+            this.lKullanici.TabIndex = 9;
+            this.lKullanici.Text = "lKullanici";
             // 
             // tUrunAra
             // 
@@ -355,6 +371,24 @@ namespace CosmoMillaCosmetics
             this.gridListe.Size = new System.Drawing.Size(540, 448);
             this.gridListe.TabIndex = 3;
             // 
+            // bRaporAl
+            // 
+            this.bRaporAl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bRaporAl.BackColor = System.Drawing.Color.OrangeRed;
+            this.bRaporAl.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.bRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bRaporAl.ForeColor = System.Drawing.Color.White;
+            this.bRaporAl.Image = global::CosmoMillaCosmetics.Properties.Resources.ara2424;
+            this.bRaporAl.Location = new System.Drawing.Point(417, 9);
+            this.bRaporAl.Margin = new System.Windows.Forms.Padding(1);
+            this.bRaporAl.Name = "bRaporAl";
+            this.bRaporAl.Size = new System.Drawing.Size(113, 48);
+            this.bRaporAl.TabIndex = 27;
+            this.bRaporAl.Text = "Rapor Al";
+            this.bRaporAl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bRaporAl.UseVisualStyleBackColor = false;
+            // 
             // fStok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,6 +397,7 @@ namespace CosmoMillaCosmetics
             this.ClientSize = new System.Drawing.Size(800, 513);
             this.Controls.Add(this.splitContainer1);
             this.Name = "fStok";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok Izleme";
             this.Load += new System.EventHandler(this.fStok_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -410,5 +445,7 @@ namespace CosmoMillaCosmetics
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tUrunAra;
         private System.Windows.Forms.DataGridView gridListe;
+        public System.Windows.Forms.Label lKullanici;
+        private System.Windows.Forms.Button bRaporAl;
     }
 }

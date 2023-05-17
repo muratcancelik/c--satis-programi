@@ -237,7 +237,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridBekle.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridBekle.EnableHeadersVisualStyles = false;
-            this.gridBekle.Location = new System.Drawing.Point(402, 5);
+            this.gridBekle.Location = new System.Drawing.Point(210, 6);
             this.gridBekle.Margin = new System.Windows.Forms.Padding(0);
             this.gridBekle.Name = "gridBekle";
             this.gridBekle.RowHeadersVisible = false;
@@ -274,30 +274,33 @@
             // 
             // lNakit
             // 
+            this.lNakit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lNakit.AutoSize = true;
-            this.lNakit.Location = new System.Drawing.Point(330, 24);
+            this.lNakit.Location = new System.Drawing.Point(442, 24);
             this.lNakit.Name = "lNakit";
-            this.lNakit.Size = new System.Drawing.Size(35, 13);
+            this.lNakit.Size = new System.Drawing.Size(32, 13);
             this.lNakit.TabIndex = 6;
-            this.lNakit.Text = "label3";
+            this.lNakit.Text = "Nakit";
             // 
             // lKart
             // 
+            this.lKart.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lKart.AutoSize = true;
-            this.lKart.Location = new System.Drawing.Point(330, 41);
+            this.lKart.Location = new System.Drawing.Point(442, 43);
             this.lKart.Name = "lKart";
-            this.lKart.Size = new System.Drawing.Size(35, 13);
+            this.lKart.Size = new System.Drawing.Size(26, 13);
             this.lKart.TabIndex = 1;
-            this.lKart.Text = "label3";
+            this.lKart.Text = "Kart";
             // 
             // lKullanici
             // 
+            this.lKullanici.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lKullanici.AutoSize = true;
-            this.lKullanici.Location = new System.Drawing.Point(242, 24);
+            this.lKullanici.Location = new System.Drawing.Point(442, 10);
             this.lKullanici.Name = "lKullanici";
-            this.lKullanici.Size = new System.Drawing.Size(35, 13);
+            this.lKullanici.Size = new System.Drawing.Size(46, 13);
             this.lKullanici.TabIndex = 5;
-            this.lKullanici.Text = "label3";
+            this.lKullanici.Text = "Kullanici";
             // 
             // chSatisiadeislemi
             // 
@@ -1859,7 +1862,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tParaUstu;
         private System.Windows.Forms.CheckBox chSatisiadeislemi;
-        private System.Windows.Forms.Label lKullanici;
         public System.Windows.Forms.Label lKart;
         public System.Windows.Forms.Label lNakit;
         public System.Windows.Forms.TextBox tGenelToplam;
@@ -1869,6 +1871,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        public System.Windows.Forms.Label lKullanici;
     }
 }
 

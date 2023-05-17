@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fBaslangic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaslangic.Designer.cs">
+      <DependentUpon>fBaslangic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDetayGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDetayGoster.Designer.cs">
+      <DependentUpon>fDetayGoster.cs</DependentUpon>
+    </Compile>
     <Compile Include="fGelirGider.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     <Compile Include="Nesnelerim.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fBaslangic.resx">
+      <DependentUpon>fBaslangic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDetayGoster.resx">
+      <DependentUpon>fDetayGoster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fGelirGider.resx">
       <DependentUpon>fGelirGider.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +150,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rpGenelRapor.rdlc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

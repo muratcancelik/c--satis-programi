@@ -17,7 +17,7 @@ namespace CosmoMillaCosmetics
             InitializeComponent();
         }
 
-        private void bAra_Click(object sender, EventArgs e)
+        public void bGoster_Click(object sender, EventArgs e)
        {
             Cursor.Current = Cursors.WaitCursor;
             DateTime baslangic = DateTime.Parse(dtBaslangic.Value.ToShortDateString());
@@ -98,6 +98,7 @@ namespace CosmoMillaCosmetics
         {
             listFiltreleme.SelectedIndex = 0;
             tKartKomisyon.Text = Islemler.KartKomisyon().ToString();
+            bGoster_Click(null, null);
         }
 
         private void gridListe_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -119,6 +120,21 @@ namespace CosmoMillaCosmetics
             fGelirGider.gelirgider = "Gider";
             fGelirGider.kullanici = lKullanici.Text;
             fGelirGider.ShowDialog();
+        }
+
+        private void detayGosterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(gridListe.Rows.Count>0)
+            {
+                int islemno = Convert.ToInt32(gridListe.CurrentRow.Cells["IslemNo"].Value.ToString());
+                if(islemno!=0)
+                {
+                    fDetayGoster fDetay = new fDetayGoster();
+                    fDetay.islemno = islemno;
+                    fDetay.ShowDialog();
+
+                }
+            }
         }
     }
 }

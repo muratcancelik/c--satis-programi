@@ -46,9 +46,54 @@ namespace CosmoMillaCosmetics
             tKart.Text = "0";
         }
 
-        private void bEkle_Click(object sender, EventArgs e)
+        public void bEkle_Click(object sender, EventArgs e)
         {
-            if()
+            if(cmbOdemeTuru.Text!="")
+            {
+                if(tNakit.Text!=""&&tKart.Text!="")
+                {
+                    using(var db=new BarkodDbEntities())
+                    {
+                        IslemOzet io = new IslemOzet();
+                        io.IslemNo = 0;
+                        io.Iade = false;
+                        io.OdemeSekli = cmbOdemeTuru.Text;
+                        io.Nakit = Islemler.DoubleYap(tNakit.Text);
+                        io.Kart = Islemler.DoubleYap(tKart.Text);
+                        if(gelirgider=="GELIR")
+                        {
+                            io.Gider = false;
+                            io.Gelir = true;
+                        }
+                        else
+                        {
+                            io.Gelir = false;
+                            io.Gider = true;
+                        }
+                        io.AlisFiyatToplam = 0;
+                        io.Aciklama = gelirgider + " -  Islemi " + tAciklama.Text;
+                        io.Tarih = dtTarih.Value;
+                        io.Kullanici = kullanici;
+                        db.IslemOzet.Add(io);
+                        db.IslemOzet.SaveChanges();
+                        MessageBox.Show(gelirgider + " islemi kaydedildi");
+                        tNakit.Text = "0";
+                        tKart.Text = "0";
+                        tAciklama.Clear();
+                        cmbOdemeTuru.Text = "";
+                        fRapor rapor = (fRapor)Application.OpenForms["fRapor"];
+                        if(rapor!=null)
+                        {
+                            rapor.bGoster_Click(null, null);
+                        }
+                        this.Hide();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lutfen odeme turunu belirleyiniz");
+            }
         }
     }
 }

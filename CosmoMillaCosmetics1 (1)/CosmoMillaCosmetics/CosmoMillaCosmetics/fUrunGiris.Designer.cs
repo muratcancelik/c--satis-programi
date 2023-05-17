@@ -35,15 +35,12 @@ namespace CosmoMillaCosmetics
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lKullanici = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.chUrunTipi = new System.Windows.Forms.CheckBox();
             this.tUrunSayisi = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tUrunAra = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.bRaporAl = new System.Windows.Forms.Button();
-            this.bKaydet = new System.Windows.Forms.Button();
-            this.bIptal = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.bUrunGrubuEkle = new System.Windows.Forms.Button();
             this.tKdvOrani = new System.Windows.Forms.TextBox();
             this.tMiktar = new System.Windows.Forms.TextBox();
             this.tSatisFiyati = new System.Windows.Forms.TextBox();
@@ -63,6 +60,12 @@ namespace CosmoMillaCosmetics
             this.gridUrunler = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.duzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bRaporAl = new System.Windows.Forms.Button();
+            this.bKaydet = new System.Windows.Forms.Button();
+            this.bIptal = new System.Windows.Forms.Button();
+            this.bBarkodOlustur = new System.Windows.Forms.Button();
+            this.bUrunGrubuEkle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -82,6 +85,8 @@ namespace CosmoMillaCosmetics
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.lKullanici);
+            this.splitContainer1.Panel1.Controls.Add(this.label11);
+            this.splitContainer1.Panel1.Controls.Add(this.chUrunTipi);
             this.splitContainer1.Panel1.Controls.Add(this.tUrunSayisi);
             this.splitContainer1.Panel1.Controls.Add(this.label10);
             this.splitContainer1.Panel1.Controls.Add(this.tUrunAra);
@@ -89,7 +94,7 @@ namespace CosmoMillaCosmetics
             this.splitContainer1.Panel1.Controls.Add(this.bRaporAl);
             this.splitContainer1.Panel1.Controls.Add(this.bKaydet);
             this.splitContainer1.Panel1.Controls.Add(this.bIptal);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.bBarkodOlustur);
             this.splitContainer1.Panel1.Controls.Add(this.bUrunGrubuEkle);
             this.splitContainer1.Panel1.Controls.Add(this.tKdvOrani);
             this.splitContainer1.Panel1.Controls.Add(this.tMiktar);
@@ -112,22 +117,55 @@ namespace CosmoMillaCosmetics
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridUrunler);
             this.splitContainer1.Size = new System.Drawing.Size(1338, 640);
-            this.splitContainer1.SplitterDistance = 260;
+            this.splitContainer1.SplitterDistance = 287;
             this.splitContainer1.TabIndex = 0;
             // 
             // lKullanici
             // 
+            this.lKullanici.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lKullanici.AutoSize = true;
-            this.lKullanici.Location = new System.Drawing.Point(1182, 22);
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullanici.Location = new System.Drawing.Point(1175, 19);
             this.lKullanici.Name = "lKullanici";
-            this.lKullanici.Size = new System.Drawing.Size(48, 13);
-            this.lKullanici.TabIndex = 29;
-            this.lKullanici.Text = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(64, 20);
+            this.lKullanici.TabIndex = 32;
+            this.lKullanici.Text = "kullanici";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label11.Location = new System.Drawing.Point(1101, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 20);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Kullanici : ";
+            // 
+            // chUrunTipi
+            // 
+            this.chUrunTipi.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chUrunTipi.AutoSize = true;
+            this.chUrunTipi.BackColor = System.Drawing.Color.Pink;
+            this.chUrunTipi.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.chUrunTipi.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.chUrunTipi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chUrunTipi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chUrunTipi.ForeColor = System.Drawing.Color.White;
+            this.chUrunTipi.Location = new System.Drawing.Point(110, 9);
+            this.chUrunTipi.Name = "chUrunTipi";
+            this.chUrunTipi.Size = new System.Drawing.Size(168, 27);
+            this.chUrunTipi.TabIndex = 30;
+            this.chUrunTipi.Text = "Barkodlu Urun Islemi";
+            this.chUrunTipi.UseVisualStyleBackColor = false;
+            this.chUrunTipi.CheckedChanged += new System.EventHandler(this.chUrunTipi_CheckedChanged);
             // 
             // tUrunSayisi
             // 
             this.tUrunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tUrunSayisi.Location = new System.Drawing.Point(586, 226);
+            this.tUrunSayisi.Location = new System.Drawing.Point(576, 252);
             this.tUrunSayisi.Name = "tUrunSayisi";
             this.tUrunSayisi.ReadOnly = true;
             this.tUrunSayisi.Size = new System.Drawing.Size(115, 26);
@@ -138,7 +176,7 @@ namespace CosmoMillaCosmetics
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label10.Location = new System.Drawing.Point(477, 229);
+            this.label10.Location = new System.Drawing.Point(467, 255);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 27;
@@ -147,7 +185,7 @@ namespace CosmoMillaCosmetics
             // tUrunAra
             // 
             this.tUrunAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tUrunAra.Location = new System.Drawing.Point(111, 229);
+            this.tUrunAra.Location = new System.Drawing.Point(110, 255);
             this.tUrunAra.Name = "tUrunAra";
             this.tUrunAra.Size = new System.Drawing.Size(242, 26);
             this.tUrunAra.TabIndex = 12;
@@ -159,104 +197,16 @@ namespace CosmoMillaCosmetics
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label9.Location = new System.Drawing.Point(12, 229);
+            this.label9.Location = new System.Drawing.Point(11, 255);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 20);
             this.label9.TabIndex = 25;
             this.label9.Text = "Urun Ara";
             // 
-            // bRaporAl
-            // 
-            this.bRaporAl.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.bRaporAl.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.bRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bRaporAl.ForeColor = System.Drawing.Color.White;
-            this.bRaporAl.Image = global::CosmoMillaCosmetics.Properties.Resources.Excel32;
-            this.bRaporAl.Location = new System.Drawing.Point(1206, 175);
-            this.bRaporAl.Margin = new System.Windows.Forms.Padding(1);
-            this.bRaporAl.Name = "bRaporAl";
-            this.bRaporAl.Size = new System.Drawing.Size(122, 74);
-            this.bRaporAl.TabIndex = 14;
-            this.bRaporAl.Text = "Rapor Al";
-            this.bRaporAl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bRaporAl.UseVisualStyleBackColor = false;
-            // 
-            // bKaydet
-            // 
-            this.bKaydet.BackColor = System.Drawing.Color.OrangeRed;
-            this.bKaydet.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.bKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bKaydet.ForeColor = System.Drawing.Color.White;
-            this.bKaydet.Image = global::CosmoMillaCosmetics.Properties.Resources.save24;
-            this.bKaydet.Location = new System.Drawing.Point(807, 79);
-            this.bKaydet.Margin = new System.Windows.Forms.Padding(1);
-            this.bKaydet.Name = "bKaydet";
-            this.bKaydet.Size = new System.Drawing.Size(115, 61);
-            this.bKaydet.TabIndex = 8;
-            this.bKaydet.Text = "Kaydet";
-            this.bKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bKaydet.UseVisualStyleBackColor = false;
-            this.bKaydet.Click += new System.EventHandler(this.bKaydet_Click);
-            // 
-            // bIptal
-            // 
-            this.bIptal.BackColor = System.Drawing.Color.DimGray;
-            this.bIptal.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.bIptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bIptal.ForeColor = System.Drawing.Color.White;
-            this.bIptal.Image = global::CosmoMillaCosmetics.Properties.Resources.cancel24;
-            this.bIptal.Location = new System.Drawing.Point(807, 16);
-            this.bIptal.Margin = new System.Windows.Forms.Padding(1);
-            this.bIptal.Name = "bIptal";
-            this.bIptal.Size = new System.Drawing.Size(115, 61);
-            this.bIptal.TabIndex = 9;
-            this.bIptal.Text = "Iptal";
-            this.bIptal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bIptal.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Sienna;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Sienna;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::CosmoMillaCosmetics.Properties.Resources.barcode4832;
-            this.button1.Location = new System.Drawing.Point(238, 143);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 82);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Barkod Olustur";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // bUrunGrubuEkle
-            // 
-            this.bUrunGrubuEkle.BackColor = System.Drawing.Color.RosyBrown;
-            this.bUrunGrubuEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.bUrunGrubuEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bUrunGrubuEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bUrunGrubuEkle.ForeColor = System.Drawing.Color.White;
-            this.bUrunGrubuEkle.Image = global::CosmoMillaCosmetics.Properties.Resources.Ekle20;
-            this.bUrunGrubuEkle.Location = new System.Drawing.Point(111, 143);
-            this.bUrunGrubuEkle.Margin = new System.Windows.Forms.Padding(1);
-            this.bUrunGrubuEkle.Name = "bUrunGrubuEkle";
-            this.bUrunGrubuEkle.Size = new System.Drawing.Size(115, 82);
-            this.bUrunGrubuEkle.TabIndex = 10;
-            this.bUrunGrubuEkle.Text = "Urun Grubu Ekle";
-            this.bUrunGrubuEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bUrunGrubuEkle.UseVisualStyleBackColor = false;
-            this.bUrunGrubuEkle.Click += new System.EventHandler(this.bUrunGrubuEkle_Click);
-            // 
             // tKdvOrani
             // 
             this.tKdvOrani.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tKdvOrani.Location = new System.Drawing.Point(586, 114);
+            this.tKdvOrani.Location = new System.Drawing.Point(564, 140);
             this.tKdvOrani.Name = "tKdvOrani";
             this.tKdvOrani.Size = new System.Drawing.Size(115, 26);
             this.tKdvOrani.TabIndex = 7;
@@ -266,7 +216,7 @@ namespace CosmoMillaCosmetics
             // tMiktar
             // 
             this.tMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tMiktar.Location = new System.Drawing.Point(586, 82);
+            this.tMiktar.Location = new System.Drawing.Point(564, 108);
             this.tMiktar.Name = "tMiktar";
             this.tMiktar.Size = new System.Drawing.Size(115, 26);
             this.tMiktar.TabIndex = 6;
@@ -276,7 +226,7 @@ namespace CosmoMillaCosmetics
             // tSatisFiyati
             // 
             this.tSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tSatisFiyati.Location = new System.Drawing.Point(586, 51);
+            this.tSatisFiyati.Location = new System.Drawing.Point(564, 77);
             this.tSatisFiyati.Name = "tSatisFiyati";
             this.tSatisFiyati.Size = new System.Drawing.Size(115, 26);
             this.tSatisFiyati.TabIndex = 5;
@@ -287,7 +237,7 @@ namespace CosmoMillaCosmetics
             // tAlisFiyati
             // 
             this.tAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tAlisFiyati.Location = new System.Drawing.Point(586, 16);
+            this.tAlisFiyati.Location = new System.Drawing.Point(564, 42);
             this.tAlisFiyati.Name = "tAlisFiyati";
             this.tAlisFiyati.Size = new System.Drawing.Size(115, 26);
             this.tAlisFiyati.TabIndex = 4;
@@ -300,7 +250,7 @@ namespace CosmoMillaCosmetics
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label8.Location = new System.Drawing.Point(477, 117);
+            this.label8.Location = new System.Drawing.Point(479, 143);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 20);
             this.label8.TabIndex = 16;
@@ -311,7 +261,7 @@ namespace CosmoMillaCosmetics
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label7.Location = new System.Drawing.Point(477, 85);
+            this.label7.Location = new System.Drawing.Point(504, 111);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 20);
             this.label7.TabIndex = 15;
@@ -322,7 +272,7 @@ namespace CosmoMillaCosmetics
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label6.Location = new System.Drawing.Point(477, 51);
+            this.label6.Location = new System.Drawing.Point(470, 83);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 14;
@@ -333,7 +283,7 @@ namespace CosmoMillaCosmetics
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label4.Location = new System.Drawing.Point(477, 22);
+            this.label4.Location = new System.Drawing.Point(481, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 13;
@@ -342,7 +292,7 @@ namespace CosmoMillaCosmetics
             // tBarkod
             // 
             this.tBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tBarkod.Location = new System.Drawing.Point(111, 16);
+            this.tBarkod.Location = new System.Drawing.Point(110, 42);
             this.tBarkod.Name = "tBarkod";
             this.tBarkod.Size = new System.Drawing.Size(242, 26);
             this.tBarkod.TabIndex = 0;
@@ -352,7 +302,7 @@ namespace CosmoMillaCosmetics
             // tUrunAdi
             // 
             this.tUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tUrunAdi.Location = new System.Drawing.Point(111, 51);
+            this.tUrunAdi.Location = new System.Drawing.Point(110, 77);
             this.tUrunAdi.Name = "tUrunAdi";
             this.tUrunAdi.Size = new System.Drawing.Size(242, 26);
             this.tUrunAdi.TabIndex = 1;
@@ -361,7 +311,7 @@ namespace CosmoMillaCosmetics
             // tAciklama
             // 
             this.tAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tAciklama.Location = new System.Drawing.Point(111, 82);
+            this.tAciklama.Location = new System.Drawing.Point(110, 108);
             this.tAciklama.Name = "tAciklama";
             this.tAciklama.Size = new System.Drawing.Size(242, 26);
             this.tAciklama.TabIndex = 2;
@@ -372,7 +322,7 @@ namespace CosmoMillaCosmetics
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(12, 112);
+            this.label3.Location = new System.Drawing.Point(11, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 7;
@@ -382,7 +332,7 @@ namespace CosmoMillaCosmetics
             // 
             this.cmbUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbUrunGrubu.FormattingEnabled = true;
-            this.cmbUrunGrubu.Location = new System.Drawing.Point(111, 111);
+            this.cmbUrunGrubu.Location = new System.Drawing.Point(110, 137);
             this.cmbUrunGrubu.Name = "cmbUrunGrubu";
             this.cmbUrunGrubu.Size = new System.Drawing.Size(242, 28);
             this.cmbUrunGrubu.TabIndex = 3;
@@ -392,7 +342,7 @@ namespace CosmoMillaCosmetics
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(23, 85);
+            this.label2.Location = new System.Drawing.Point(22, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 5;
@@ -403,7 +353,7 @@ namespace CosmoMillaCosmetics
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(25, 54);
+            this.label1.Location = new System.Drawing.Point(24, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 4;
@@ -414,7 +364,7 @@ namespace CosmoMillaCosmetics
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label5.Location = new System.Drawing.Point(36, 22);
+            this.label5.Location = new System.Drawing.Point(35, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 3;
@@ -423,6 +373,7 @@ namespace CosmoMillaCosmetics
             // gridUrunler
             // 
             this.gridUrunler.AllowUserToAddRows = false;
+            this.gridUrunler.AllowUserToDeleteRows = false;
             this.gridUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridUrunler.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -449,6 +400,7 @@ namespace CosmoMillaCosmetics
             this.gridUrunler.Location = new System.Drawing.Point(0, 0);
             this.gridUrunler.Margin = new System.Windows.Forms.Padding(0);
             this.gridUrunler.Name = "gridUrunler";
+            this.gridUrunler.ReadOnly = true;
             this.gridUrunler.RowHeadersVisible = false;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -461,22 +413,119 @@ namespace CosmoMillaCosmetics
             this.gridUrunler.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.gridUrunler.RowTemplate.ContextMenuStrip = this.contextMenuStrip1;
             this.gridUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridUrunler.Size = new System.Drawing.Size(1338, 376);
+            this.gridUrunler.Size = new System.Drawing.Size(1338, 349);
             this.gridUrunler.TabIndex = 2;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.silToolStripMenuItem});
+            this.silToolStripMenuItem,
+            this.duzenleToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 48);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            // 
+            // duzenleToolStripMenuItem
+            // 
+            this.duzenleToolStripMenuItem.Name = "duzenleToolStripMenuItem";
+            this.duzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.duzenleToolStripMenuItem.Text = "Duzenle";
+            this.duzenleToolStripMenuItem.Click += new System.EventHandler(this.duzenleToolStripMenuItem_Click);
+            // 
+            // bRaporAl
+            // 
+            this.bRaporAl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bRaporAl.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.bRaporAl.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.bRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bRaporAl.ForeColor = System.Drawing.Color.White;
+            this.bRaporAl.Image = global::CosmoMillaCosmetics.Properties.Resources.Excel32;
+            this.bRaporAl.Location = new System.Drawing.Point(1206, 175);
+            this.bRaporAl.Margin = new System.Windows.Forms.Padding(1);
+            this.bRaporAl.Name = "bRaporAl";
+            this.bRaporAl.Size = new System.Drawing.Size(122, 74);
+            this.bRaporAl.TabIndex = 14;
+            this.bRaporAl.Text = "Rapor Al";
+            this.bRaporAl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bRaporAl.UseVisualStyleBackColor = false;
+            // 
+            // bKaydet
+            // 
+            this.bKaydet.BackColor = System.Drawing.Color.OrangeRed;
+            this.bKaydet.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.bKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bKaydet.ForeColor = System.Drawing.Color.White;
+            this.bKaydet.Image = global::CosmoMillaCosmetics.Properties.Resources.save24;
+            this.bKaydet.Location = new System.Drawing.Point(766, 105);
+            this.bKaydet.Margin = new System.Windows.Forms.Padding(1);
+            this.bKaydet.Name = "bKaydet";
+            this.bKaydet.Size = new System.Drawing.Size(115, 61);
+            this.bKaydet.TabIndex = 8;
+            this.bKaydet.Text = "Kaydet";
+            this.bKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bKaydet.UseVisualStyleBackColor = false;
+            this.bKaydet.Click += new System.EventHandler(this.bKaydet_Click);
+            // 
+            // bIptal
+            // 
+            this.bIptal.BackColor = System.Drawing.Color.DimGray;
+            this.bIptal.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bIptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bIptal.ForeColor = System.Drawing.Color.White;
+            this.bIptal.Image = global::CosmoMillaCosmetics.Properties.Resources.cancel24;
+            this.bIptal.Location = new System.Drawing.Point(766, 42);
+            this.bIptal.Margin = new System.Windows.Forms.Padding(1);
+            this.bIptal.Name = "bIptal";
+            this.bIptal.Size = new System.Drawing.Size(115, 61);
+            this.bIptal.TabIndex = 9;
+            this.bIptal.Text = "Iptal";
+            this.bIptal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bIptal.UseVisualStyleBackColor = false;
+            // 
+            // bBarkodOlustur
+            // 
+            this.bBarkodOlustur.BackColor = System.Drawing.Color.Sienna;
+            this.bBarkodOlustur.FlatAppearance.BorderColor = System.Drawing.Color.Sienna;
+            this.bBarkodOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bBarkodOlustur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bBarkodOlustur.ForeColor = System.Drawing.Color.White;
+            this.bBarkodOlustur.Image = global::CosmoMillaCosmetics.Properties.Resources.barcode4832;
+            this.bBarkodOlustur.Location = new System.Drawing.Point(237, 169);
+            this.bBarkodOlustur.Margin = new System.Windows.Forms.Padding(1);
+            this.bBarkodOlustur.Name = "bBarkodOlustur";
+            this.bBarkodOlustur.Size = new System.Drawing.Size(115, 82);
+            this.bBarkodOlustur.TabIndex = 11;
+            this.bBarkodOlustur.Text = "Barkod Olustur";
+            this.bBarkodOlustur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bBarkodOlustur.UseVisualStyleBackColor = false;
+            this.bBarkodOlustur.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bUrunGrubuEkle
+            // 
+            this.bUrunGrubuEkle.BackColor = System.Drawing.Color.RosyBrown;
+            this.bUrunGrubuEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.bUrunGrubuEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bUrunGrubuEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bUrunGrubuEkle.ForeColor = System.Drawing.Color.White;
+            this.bUrunGrubuEkle.Image = global::CosmoMillaCosmetics.Properties.Resources.Ekle20;
+            this.bUrunGrubuEkle.Location = new System.Drawing.Point(110, 169);
+            this.bUrunGrubuEkle.Margin = new System.Windows.Forms.Padding(1);
+            this.bUrunGrubuEkle.Name = "bUrunGrubuEkle";
+            this.bUrunGrubuEkle.Size = new System.Drawing.Size(115, 82);
+            this.bUrunGrubuEkle.TabIndex = 10;
+            this.bUrunGrubuEkle.Text = "Urun Grubu Ekle";
+            this.bUrunGrubuEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bUrunGrubuEkle.UseVisualStyleBackColor = false;
+            this.bUrunGrubuEkle.Click += new System.EventHandler(this.bUrunGrubuEkle_Click);
             // 
             // fUrunGiris
             // 
@@ -524,13 +573,16 @@ namespace CosmoMillaCosmetics
         private System.Windows.Forms.Button bRaporAl;
         private System.Windows.Forms.Button bKaydet;
         private System.Windows.Forms.Button bIptal;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bBarkodOlustur;
         private System.Windows.Forms.Button bUrunGrubuEkle;
         private System.Windows.Forms.DataGridView gridUrunler;
         public System.Windows.Forms.TextBox tBarkod;
-        private System.Windows.Forms.Label lKullanici;
         public System.Windows.Forms.ComboBox cmbUrunGrubu;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox chUrunTipi;
+        private System.Windows.Forms.ToolStripMenuItem duzenleToolStripMenuItem;
+        public System.Windows.Forms.Label lKullanici;
     }
 }

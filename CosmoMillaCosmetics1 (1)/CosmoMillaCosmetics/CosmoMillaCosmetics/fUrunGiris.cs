@@ -33,6 +33,14 @@ namespace CosmoMillaCosmetics
                     tSatisFiyati.Text = urun.SatisFiyati.toString();
                     tMiktar.Text = urun.Miktar.toString();
                     tKdvOrani.Text = urun.KdvOrani.toString();
+                    if(urun.Birim=="Kg")
+                    {
+                        chUrunTipi.Checked = true;
+                    }
+                    else
+                    {
+                        chUrunTipi.Checked = false;
+                    }
                 }
                 else
                 {
@@ -57,7 +65,14 @@ namespace CosmoMillaCosmetics
                     guncelle.KdvOrani = Convert.ToInt16(tKdvOrani.Text);
                     guncelle.KdvTutari = Math.Round(Islemler.DoubleYap(tSatisFiyati.Text) * Convert.ToInt32(tKdvOrani.Text) / 100, 2);
                     guncelle.Miktar += Convert.ToDouble(tMiktar.Text);
-                    guncelle.Birim = "Adet";
+                    if(chUrunTipi.Checked)
+                    {
+                        guncelle.Birim = "Kg";
+                    }
+                    else
+                    {
+                        guncelle.Birim = "Adet";
+                    }
                     guncelle.Tarih = DateTime.Now;
                     guncelle.Kullanici = lKullanici.Text;
                     db.SaveChanges();
@@ -76,7 +91,14 @@ namespace CosmoMillaCosmetics
                     urun.KdvOrani = Convert.ToInt16(tKdvOrani.Text);
                     urun.KdvTutari = Math.Round(Islemler.DoubleYap(tSatisFiyati.Text) * Convert.ToInt32(tKdvOrani.Text) / 100, 2);
                     urun.Miktar = Convert.ToDouble(tMiktar.Text);
-                    urun.Birim = "Adet";
+                    if(chUrunTipi.Checked)
+                    {
+                        urun.Birim = "Kg";
+                    }
+                    else
+                    {
+                        urun.Birim = "Adet";
+                    }
                     urun.Tarih = DateTime.Now;
                     urun.Kullanici = lKullanici.Text;
                     db.Urun.Add(urun);
@@ -91,7 +113,7 @@ namespace CosmoMillaCosmetics
                     gridUrunler.DataSource = db.Urun.OrderbyDescending(a => a.UrunID).Take(20).toList();
                     Islemler.GridDuzenle(gridUrunler);
                 }
-                Islemler.StokHareket(tBarkod.Text, tUrunAdi.Text, "Adet", Convert.ToDouble(tMiktar.Text), cmbUrunGrubu.Text, lKullanici.Text);
+                Islemler.StokHareket(tBarkod.Text, tUrunAdi.Text, "Adet", Convert.ToDouble(tMiktar.Text), cmbUrunGrubu.Text, lKullanici2.Text);
                 temizle();
 
             }
@@ -120,6 +142,7 @@ namespace CosmoMillaCosmetics
             tSatisFiyati.Text = "0";
             tMiktar.Text = "0";
             tKdvOrani.Text = "8";
+            chUrunTipi.Checked = false;
         }
 
         private void fUrunGiris_Load(object sender, EventArgs e)
@@ -191,6 +214,46 @@ namespace CosmoMillaCosmetics
                 }
             }
 
+        }
+
+        private void chUrunTipi_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chUrunTipi.Checked)
+            {
+                chUrunTipi.Text = "Gramajli Urun Islemi";
+                bBarkodOlustur.Enabled = false;
+
+            }
+            else
+            {
+                chUrunTipi.Text = "Barkodlu Urun Islemi";
+                bBarkodOlustur.Enabled = true;
+            }
+        }
+
+        private void duzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(gridUrunler.Rows.Count>0)
+            {
+                tBarkod.Text = gridUrunler.CurrentRow.Cells["Barkod"].Value.ToString();
+                tUrunAdi.Text = gridUrunler.CurrentRow.Cells["UrunAdi"].Value.ToString();
+                tAciklama.Text = gridUrunler.CurrentRow.Cells["Aciklama"].Value.ToString();
+                cmbUrunGrubu.Text = gridUrunler.CurrentRow.Cells["UrunGrup"].Value.ToString();
+                tAlisFiyati.Text = gridUrunler.CurrentRow.Cells["AlisFiyat"].Value.ToString();
+                tSatisFiyati.Text = gridUrunler.CurrentRow.Cells["SatisFiyat"].Value.ToString();
+                tKdvOrani.Text = gridUrunler.CurrentRow.Cells["KdvOran"].Value.ToString();
+                tMiktar.Text = gridUrunler.CurrentRow.Cells["Miktar"].Value.ToString();
+                string birim = gridUrunler.CurrentRow.Cells["Birim"].Value.ToString();
+                if(birim=="Kg")
+                {
+                    chUrunTipi.Checked = true;
+                }
+                else
+                {
+                    chUrunTipi.Checked = false;
+                }
+
+            }
         }
     }
    
